@@ -8,15 +8,59 @@
     <style>
         .shower {
             --slide-ratio: calc(16 / 9);
+            --ribbon-size: 40px;
+        }
+        .progress::before {
+            background-color: #35c2f2;
+        }
+        .slide {
+            padding-top: 51px;
+            background: #fff url(pictures/slide_bg.png) no-repeat;
+            background-size: cover;
+        }
+        .slide.clear {
+            background-image: none;
+        }
+        .slide::after {
+            top: auto;
+            bottom: 0;
+            left: 40px;
+            right: auto;
+            color: initial;
+            background: none;
         }
     </style>
 </head>
 <body class="shower list">
 
     <header class="caption">
-        <h1>Shower Presentation Engine</h1>
-        <p>Yours Truly, Famous Inc.</p>
+        <h1>Docker для фронтендера (мастер-класс)</h1>
+        <p><a href="https://alexey-avdeev.com/">Алексей Авдеев</a>, Aitu.Team</p>
     </header>
+
+    <section class="slide clear" id="cover">
+        <h2>Docker для фронтендера (мастер-класс)</h2>
+        <p><a href="https://alexey-avdeev.com/">Алексей Авдеев</a>, Aitu.Team</p>
+        <figure>
+            <img class="cover h" src="pictures/cover.png" alt="Обложка">
+        </figure>
+        <style>
+            #cover h2 {
+                padding-right: 130px;
+                margin: 0;
+                color: #fff;
+                font-size: 60px;
+            }
+            #cover p {
+                margin: 10px 0 0;
+                color: #fff;
+                font-size: 30px;
+            }
+            #cover p a {
+                color: #fff;
+            }
+        </style>
+    </section>
 
     <section class="slide">
         <!-- Create your first slide -->
